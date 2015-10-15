@@ -14,7 +14,10 @@ sudo yum -y install curl openssh-server postfix cronie
 #sudo yum -y install gitlab-ce
 
 # another way to install gitlab
-rpm -ivh ../rpms/gitlab-ce-8.0.5-ce.0.el6.x86_64.rpm
+sudo rpm -ivh ../rpms/gitlab-ce-8.0.5-ce.0.el6.x86_64.rpm
+
+# config external_url
+sudo vi /etc/gitlab/gitlab.rb # external_url 'http://123.59.68.177'
 
 # Configure and start GitLab
-#sudo gitlab-ctl reconfigure
+sudo gitlab-ctl reconfigure

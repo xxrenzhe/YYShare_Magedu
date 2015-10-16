@@ -13,7 +13,6 @@ sudo bash -c "echo 01 > serial"
 
 sudo mkdir -p /etc/gitlab/ssl
 cd /etc/gitlab/ssl
-#sudo bash -c 'cd /etc/gitlab/ssl'
 sudo bash -c '(umask 077;openssl genrsa -out 123.59.68.177.key 1024)'
 sudo bash -c 'openssl req -new -key 123.59.68.177.key -out 123.59.68.177.csr'
 

@@ -8,6 +8,7 @@ git config --global user.name "Administrator"
 git config --global user.email "admin@example.com"
 
 ## Create a new repository
+cd /tmp
 git clone git@123.59.68.177:root/repo_test.git
 cd repo_test
 touch README.md

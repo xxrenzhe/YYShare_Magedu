@@ -10,6 +10,9 @@ sudo bash -c "cat <<- EOF >> /etc/gitlab/gitlab.rb
 	gitlab_rails['backup_keep_time'] = 604800
 EOF"
 
+sudo gitlab-ctl reconfigure # 使配置生效
+sudo gitlab-ctl restart
+
 mkdir /data/git_backups >> /dev/null 2>&1
 
 sudo bash -c "echo '0 2 * * * /usr/bin/gitlab-rake gitlab:backup:create' >> /var/spool/cron/root"

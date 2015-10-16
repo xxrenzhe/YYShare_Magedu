@@ -25,3 +25,6 @@ sudo bash -c "cat <<- EOF >> /etc/gitlab/gitlab.rb
 	
 	nginx['redirect_http_to_https'] = true
 EOF"
+
+sudo gitlab-ctl reconfigure # 使配置生效
+sudo gitlab-ctl restart 
